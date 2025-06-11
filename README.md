@@ -1,0 +1,1 @@
+# EchoRec-Screen-Recording-Extension
