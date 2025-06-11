@@ -1,0 +1,34 @@
+{
+  "name": "EchoRec Screen Recorder",
+  "description": "Record your current browser tab with seamless tab switching support and microphone audio.",
+  "version": "2.0",
+  "manifest_version": 3,
+  "permissions": [
+    "tabCapture",
+    "activeTab",
+    "storage",
+    "downloads",
+    "offscreen"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "offscreen": {
+    "reasons": ["USER_MEDIA"],
+    "justification": "Required to capture tab and screen media streams.",
+    "path": "offscreen.html"
+  }
+}

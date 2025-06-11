@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Tab Recorder</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="title">🎥 Pro Tab Recorder</h1>
+      <button id="minimizeBtn" class="minimize-btn" title="Minimize">
+        <span id="minimizeIcon"><i class="fas fa-chevron-up"></i></span>
+      </button>
+    </div>
+    <div id="compactIndicator" class="compact-indicator"></div>
+
+    <p id="description" class="description">Record your screen, a window, or an individual browser tab.</p>
+
+    <div id="mainButtonContainer" class="main-button-container">
+      <button id="startBtn" class="primary-action-btn">
+        <i class="fas fa-play"></i> Start Recording
+      </button>
+    </div>
+
+    <div id="secondaryActions" class="secondary-actions">
+      <button id="pauseBtn" disabled><i class="fas fa-pause"></i> Pause</button>
+      <button id="resumeBtn" disabled><i class="fas fa-redo-alt"></i> Resume</button>
+      <button id="stopBtn" disabled><i class="fas fa-stop"></i> Stop</button>
+    </div>
+
+    <div id="micControl" class="mic-control">
+      <input type="checkbox" id="micToggle">
+      <label for="micToggle">
+        <i class="fas fa-microphone"></i> Record microphone audio
+      </label>
+    </div>
+
+    <div id="status" class="status">Ready to record</div>
+
+    <div id="info" class="info">
+      <p><i class="fas fa-info-circle"></i> Important Notes:</p>
+      <ul>
+        <li><i class="fas fa-circle-notch"></i> Keep this popup open while recording</li>
+        <li><i class="fas fa-microphone"></i> Microphone audio can be toggled</li>
+        <li><i class="fas fa-pause-circle"></i> Pause/resume recording as needed</li>
+        <li><i class="fas fa-download"></i> File downloads automatically when stopped</li>
+      </ul>
+    </div>
+
+    <video id="preview" controls></video>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
